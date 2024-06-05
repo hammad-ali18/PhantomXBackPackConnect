@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 import WalletContextProvider from '../components/WalletContextProvider'
 import { AppBar } from '../components/AppBar'
 // import { BalanceDisplay } from '../components/BalanceDisplay'
-import { PingButton } from '../components/PingButton'
+import { SendTx } from '../components/SendTx'
 import Head from 'next/head'
 
 const Home: NextPage = (props) => {
@@ -21,7 +21,7 @@ const Home: NextPage = (props) => {
       <WalletContextProvider>
         <AppBar />
         <div className={styles.AppBody}>
-          <PingButton />
+          <SendTx />
         </div>
       </WalletContextProvider >
     </div>

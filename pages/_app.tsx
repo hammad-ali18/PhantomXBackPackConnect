@@ -8,8 +8,8 @@ import {
 } from "@solana/wallet-adapter-wallets";
 import { clusterApiUrl } from "@solana/web3.js";
 import { BackpackWalletAdapter } from "@solana/wallet-adapter-backpack";
-
-require("@solana/wallet-adapter-react-ui/styles.css");
+import "@solana/wallet-adapter-react-ui/styles.css";
+// require("@solana/wallet-adapter-react-ui/styles.css");
 require("../styles/globals.css");
 require ("../styles/Home.module.css");
 
