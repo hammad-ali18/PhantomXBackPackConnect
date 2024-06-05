@@ -12,7 +12,7 @@
 
  <ol> <li>Clone the repository:</li> </ol>
 
- <pre><code>$ git clone https://github.com/codescalper/solana-wallet-integration.git</code></pre>
+
 
  <ol start="2"> <li>Change into the project directory:</li> </ol>
 
@@ -64,4 +64,4 @@
  <p> If you would like to contribute to this project, please fork the repository, make your changes, and create a pull request. We welcome all contributions, including bug fixes and feature enhancements. </p>
  <h2>Issues</h2>
 
- <p> If you encounter any issues while using this project, please create an issue on the <a href="https://github.com/codescalper/solana-wallet-integration/issues">GitHub repository</a>. </p>
+
