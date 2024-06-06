@@ -18,8 +18,11 @@ import idl from '../idl/greeter_example.json'
 // const PROGRAM_ID = new Web3.PublicKey("ChT1B39WKLS8qUrkLvFDXMhEJ4F1XZzwUNHUt4AU9aVa")
 
 const PROGRAM_ID = new Web3.PublicKey(idl.metadata.address); 
-const PRIVATE_KEY ='YOUR_PRIVATE_KEY';
-// const PROGRAM_DATA_PUBLIC_KEY = new Web3.PublicKey("HpeaJ9KvqJiTizS9qVJ8G4CJn3gzBLNptL7CR1eTm9Sd")
+const PRIVATE_KEY =''
+// const PRIVATE_KEY = process.env.PRIVATE_KEY || '';
+// console.log(PRIVATE_KEY)
+
+const PROGRAM_DATA_PUBLIC_KEY = new Web3.PublicKey("HpeaJ9KvqJiTizS9qVJ8G4CJn3gzBLNptL7CR1eTm9Sd")
 // if (!PRIVATE_KEY) {
 // 	console.log("error")
 // 	throw new Error("PRIVATE_KEY environment variable is not set");
@@ -216,13 +219,19 @@ console.log(`The signatures were verified: ${isVerifiedSignature}`);
 		// 	<button className={styles.button}>Click to Send Transaction</button>
 
 		// </div>
-		<div>
-
+		<div className={styles.buttonContainer}>
+   
             <input type='text'  value={textField} onChange={handleGreetingChange}/>
-			<button className={styles.buttonContainer} onClick={setGreeting}>Set Greeting</button>
+			<button className={styles.button} onClick={setGreeting}>Set Greeting</button>
 
-			<button className={styles.buttonContainer} onClick={getGreeting}>Get Greeting</button>
+			<button className={styles.button} onClick={getGreeting}>Get Greeting</button>
+			
 			{greetingText && <div className={styles.greeting}>Greeting: {greetingText}</div>}
+			<br/>
+			<div>
+            {!connected && <WalletMultiButton/>}
+		    {connected && <WalletDisconnectButton/>}
+			</div>
 		</div>
 	)
 }
